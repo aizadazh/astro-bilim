@@ -1,3 +1,9 @@
+# Project Title
+
+astro-bilim.kg is the personal web-site of vedic astrologer. The main purpose of this project is to help human being to live garmonic life and overcome life difficulties in more ecological way.
+
+## Getting Started
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
