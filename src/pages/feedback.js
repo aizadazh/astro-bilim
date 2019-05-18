@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import { Layout } from "../components";
 
 
-class VedicPage extends Component{
+class FeedbackPage extends Component{
   render(){
     return (
       <Layout>  
         <h1>
-          Ведическая культура
+          Отзывы
         </h1>
       </Layout>         
     )
   }
 }
 
-export default VedicPage;
+export default FeedbackPage;

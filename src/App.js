@@ -1,7 +1,8 @@
 import React from "react";
-import VedicPage from "./pages/vedic";
+import HoroPage from "./pages/horo";
 import HomePage from "./pages/home";
 import ArticlePage from "./pages/article";
+import FeedbackPage from "./pages/feedback";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -9,12 +10,10 @@ class App extends React.Component {
     return (
       <Router>
         <>
-          <Route path="/" exact component={VedicPage} />
-          <Route path="/home" component={HomePage} />
-          <Route path="/article" render={({ match }) => {
-              return <h1>Статьи</h1>
-          }} />
-          <Route path="/article/:category_slug?" component={ArticlePage} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/horo" component={HoroPage} />          
+          <Route path="/article" component={ArticlePage} />
+          <Route path="/feedback" component={FeedbackPage} />        
         </>
       </Router>
     );
