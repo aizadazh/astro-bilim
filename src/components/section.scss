@@ -1,0 +1,29 @@
+.section {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: url(../images/3.jpg) no-repeat;
+    background-size: cover; 
+    .subsection1{
+        display: flex;
+        flex-direction: column;
+        .display2{
+            color: white;
+            font-family: cursive;
+        }
+        .text {
+            font-family: cursive;
+            font-size: 1.2em;
+            line-height: 150%;
+        }
+        .text__section {
+            color: white;
+        }
+        }
+    }
+
+    

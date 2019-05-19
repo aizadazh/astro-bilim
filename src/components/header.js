@@ -14,9 +14,9 @@ class Header extends Component {
 class Logo extends Component {  
   render(){
     return (
-      <figure className="logo">
-        <img className="header__logo" href="https://cdn6.aptoide.com/imgs/e/3/f/e3ff5f9edda351f1ec4e24c2d23a84e9_icon.png" alt="logo"></img>
-      </figure>
+      <div className="logo">
+        <img className="header__logo" src="../images/logo.png" alt="logo"></img>
+      </div>
     )
   }
 }
