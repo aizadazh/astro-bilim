@@ -15,7 +15,7 @@ class Logo extends Component {
   render(){
     return (
       <div className="logo">
-        <img className="header__logo" src="../images/logo.png" alt="logo"></img>
+        <span className="logo__text">ASTRO-BILIM</span>
       </div>
     )
   }

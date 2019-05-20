@@ -1,29 +1,23 @@
 .main {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 100%;
-    max-width: 1200px;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    background: url(../images/4.jpg) no-repeat;
-    background-size: cover; 
-    .main__content2{
-        display: flex;
-        flex-direction: column;
-        .display2{
-            color: white;
-            font-family: cursive;
-        }
-        .text {
-            font-family: cursive;
-            font-size: 1.2em;
-            line-height: 150%;
-        }
-        .text__main {
-            color: white;
-        }
-        }
+    max-width: 1200px;      
+    .main__content1{
+        height: 100vh;             
+        background: url(../images/background3.png) no-repeat;
+        background-size: cover;         
     }
-    
-
+    .main__content2{        
+        height: 100vh;        
+        background: url(../images/background2.jpg) no-repeat;
+        background-size: cover;       
+    } 
+    .main__content3{
+        height: 100vh;        
+        background: url(../images/background4.jpg) no-repeat;
+        background-size: cover; 
+    }
+   
+}
