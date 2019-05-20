@@ -4,11 +4,57 @@
     font-weight: bold;
     text-align: center;
 }
-.text {
-    font-family: cursive;
-    font-size: 1.2em;
-    
+.subsection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em;
+   
+    .subsection__natal{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 450px;
+        border: 1px solid white;
+        border-radius: 10px;
+        overflow: scroll;
+        .display3{
+            text-align: center;
+            font-family: cursive;
+            color: white;
+        }
+        .subsection__natal-text {
+            font-family: cursive;
+            font-size: 1em;
+            color: white;
+            text-align: justify;
+            padding: 0 0.5em;  
+        }       
+    }    
 }
-.text__main {
-    color: white;
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+} 
+.btn__horo {
+    color: darkblue;
+    font-weight: bold;
+    background-color: gold;
+    margin: 1.5em 3em;
+    width: 250px;
+} 
+
+
+
