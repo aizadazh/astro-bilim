@@ -1,0 +1,45 @@
+.welcome{
+    padding: 2rem;    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    .welcome__title {
+        color: white;
+        font-weight: 800;
+        font-family: cursive;
+    }
+    .welcome__description{
+        color: red;
+        font-weight: 400;
+        font-family: cursive;
+    }
+}
+.form {
+    max-width: 1200px;   
+    background: transparent;
+    border: none;
+    font-family: cursive;
+    display: flex;
+    padding-left: 2rem;
+        .form__input {
+        display: block;       
+        font-size: 1.5em;
+        width: 25%;
+        background:  white;
+        color: black;
+        border-radius: 5px;
+        border: none;
+    }
+        .form__submit{
+            display: block;        
+            font-size: 1.5em;
+            width: 25%;
+            background: goldenrod;
+            color: blue;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+    }
+}
+    
