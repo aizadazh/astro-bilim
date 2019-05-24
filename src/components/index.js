@@ -1,3 +1,4 @@
-export { default as Layout } from "./layout.js";
-export { default as Header } from "./header.js";
-export { default as Footer } from "./footer.js";
+export { default as MainLayout } from "./MainLayout";
+export { default as ArtLayout } from "./ArtLayout";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";

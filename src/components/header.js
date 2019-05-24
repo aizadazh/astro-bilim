@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import "./header.scss" 
 import "./base.scss"
-import Welcome from "./welcome";
+
 
 class Header extends Component {  
   render(){
     return (
-      <div className="header-wrapper">
+      <div className="container">
         <header className="header">
           <Logo />
-          <Nav />          
-        </header>
-        <div className="welcome">
-          <Welcome />
-        </div>
-      </div>
+          <Nav />                  
+        </header>       
+     </div>
     )
   }
 }
@@ -33,10 +30,10 @@ class Nav extends Component {
       <nav className="menu">                 
         <a className="menu__item" href="/">Главная</a>         
         <a className="menu__item" href="/">Гороскоп</a>
-        <a className="menu__item" href="/">Статьи</a>
-        <a className="menu__item" href="/">Отзывы</a>
+        <a className="menu__item" href="/">Статьи</a>       
       </nav>      
     )
   }
 }
+
 export default Header

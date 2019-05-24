@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import { Layout } from "../components";
-
+import { MainLayout } from "../components";
 
 
 class HomePage extends Component{
   render(){
     return (
-      <Layout>
+      <MainLayout>
                     
-      </Layout>
+      </MainLayout>
     )
   }
 }

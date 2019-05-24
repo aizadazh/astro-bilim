@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from "react";
-import Header from "./header.js";
-import Main from "./main.js";
-import Footer from "./footer.js";
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
 
 
-class Layout extends Component{
+class MainLayout extends Component{
   render(){
     return (
       <Fragment>
@@ -19,4 +19,4 @@ class Layout extends Component{
   }
 }
 
-export default Layout;
+export default MainLayout;

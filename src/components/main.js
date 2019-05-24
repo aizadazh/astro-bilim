@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import Section2 from "./section2.js";
+import Welcome from "./Welcome";
+import Section2 from "./Section2";
 import "./main.scss" 
 
 class Main extends Component {  
   render(){
     return (
       <main className="main">
-          <Block1 />
-          <Block2 />
-          <Block3 />                
+        <Welcome />
+        <Block1 />
+        <Block2 />
+        <Block3 />                
       </main>
     )
   }
