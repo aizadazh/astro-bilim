@@ -19,7 +19,7 @@ class Logo extends Component {
   render(){
     return (
       <div className="logo">
-        <span className="logo__text">ASTRO-BILIM</span>
+        <a className="logo__text" href="/">ASTRO-BILIM</a>
       </div>
     )
   }
@@ -27,13 +27,23 @@ class Logo extends Component {
 class Nav extends Component {  
   render(){
     return (
-      <nav className="menu">                 
-        <a className="menu__item" href="/">Главная</a>         
-        <a className="menu__item" href="/">Гороскоп</a>
-        <a className="menu__item" href="/">Статьи</a>       
-      </nav>      
-    )
-  }
-}
+      <ul className="menu">                         
+        <li className="menu__list"><a className="menu__item" href="/">Услуги</a>
+          <ul className="submenu">
+            <li className="menu__list"><a className="submenu__item" href="/">Натальная карта</a></li>
+            <li className="menu__list"><a className="submenu__item" href="/">Натальная карта ребенка</a></li>
+            <li className="menu__list"><a className="submenu__item" href="/">Бизнес астрология</a></li>
+            <li className="menu__list"><a className="submenu__item" href="/">Карта совместимости</a></li>
+            <li className="menu__list"><a className="submenu__item" href="/">Личная жизнь</a></li>
+            <li className="menu__list"><a className="submenu__item" href="/">Выбор даты</a></li>
 
-export default Header
+          </ul> 
+        </li>
+        <li><a className="menu__item" href="/">Астропрогноз</a></li>       
+        <li><a className="menu__item" href="/">Гороскопы звезд</a></li>
+        <li><a className="menu__item" href="/">Статьи</a></li>           
+      </ul>      
+    );
+  };
+};
+export default Header;
