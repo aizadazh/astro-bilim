@@ -4,7 +4,8 @@
     top: 0;  
     display: flex;
     justify-content: space-between;
-    background: url(../images/background1.jpg);          
+    background: url(../images/background1.jpg);
+    position: relative;          
     .logo{
         width: 30%;  
         height: auto; 
@@ -23,9 +24,9 @@
         width: 70%;
         display: flex;
         justify-content: space-around;
-        align-items: flex-start;
-        margin-right: 2rem;
+        align-items: flex-start;        
         margin-top: 2rem; 
+        margin-right:2rem;
         position: relative;        
         .menu__item{
             text-decoration: none;

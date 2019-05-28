@@ -1,0 +1,46 @@
+.form-group{    
+    background: #060620;
+    border-radius: 1em;
+    position: absolute;
+    top: 100%;
+    left: 35%;
+  
+    
+    .log-modal {
+        width: 25em;
+        height: 25em;
+    }
+    .reg-modal {
+        width: 25em;
+        height: 35em;
+    }
+    .form-group-content {
+        padding: 0 3em;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        .label-info{
+            color: red;
+            padding: 1em 0; 
+            font-family: cursive;
+            font-weight: 400;          
+        }
+        .modal-input {
+            width: 23em;
+            height: 3em;
+            border:none;
+            border-radius: 0.5em;
+        }
+    }
+    .modal-footer{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2em;
+        font-family: cursive;
+        font-weight: 400; 
+        color: white;
+    }
+}
+
+
+

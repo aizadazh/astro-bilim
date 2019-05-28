@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from "./Modal"
 import "./header.scss" 
 import "./base.scss"
 
@@ -9,7 +10,8 @@ class Header extends Component {
       <div className="container">
         <header className="header">
           <Logo />
-          <Nav />                  
+          <Nav />
+          <Modal />                  
         </header>       
      </div>
     )
