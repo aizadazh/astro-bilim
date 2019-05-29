@@ -72,18 +72,19 @@ class Modal extends Component {
             //     "password": innerState.password
             // })
         }
-        
-               
+             
   render(){
     return (        
         <div className="modal-wrapper">
             <div className="log-reg">          
-                <button className="btn btn__entry">Вход</button>
-                <button className="btn btn__reg">Регистрация</button>
+                <button onClick={this.openLogModal} className="btn btn__entry">Вход</button>
+                <button onClick={this.openRegModal} className="btn btn__reg">Регистрация</button>
             </div>
-            <div className="form-group"> 
+            <div className="modal-window"> 
                 <div className="log-modal" isOpen={this.state.logModal}>
-                    <h2 className="display2">Вход</h2>
+                    <div className="modal-header">
+                        <h2 className="display2">Вход</h2>                       
+                    </div>
                     <form className="form-group-content" onSubmit={this.handleLoginSubmit}>                        
                         <label className="label-info">Введите электронную почту</label>
                         <input className="modal-input"
@@ -106,9 +107,11 @@ class Modal extends Component {
                 </form>
                 </div>
             </div>
-            <div className="form-group"> 
+            <div className="modal-window"> 
                 <div className="reg-modal" isOpen={this.state.regModal}>
-                    <h2 className="display2">Регистрация</h2>
+                    <div className="modal-header">
+                        <h2 className="display2">Регистрация</h2>
+                    </div>
                         <form className="form-group-content" onSubmit={this.handleRegistrationSubmit}>                            
                             <label className="label-info">Имя</label>
                             <input className="modal-input"
@@ -157,6 +160,4 @@ class Modal extends Component {
     )
   }
 }
-
-
-  export default Modal
+export default Modal

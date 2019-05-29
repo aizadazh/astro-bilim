@@ -1,11 +1,13 @@
-.form-group{    
+.modal-window{    
     background: #060620;
     border-radius: 1em;
     position: absolute;
     top: 100%;
     left: 35%;
-  
-    
+    .modal-header{
+        display: flex;
+        justify-content: space-between;
+    }    
     .log-modal {
         width: 25em;
         height: 25em;
@@ -30,6 +32,7 @@
             height: 3em;
             border:none;
             border-radius: 0.5em;
+            padding-left: 1em;
         }
     }
     .modal-footer{

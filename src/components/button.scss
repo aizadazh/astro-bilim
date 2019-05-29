@@ -3,6 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     margin-top: 2rem;
+
     button{
         padding: 0;
         border: none;
@@ -33,6 +34,10 @@
         }
         & .btn__reg {
             width: 6em;
+            height: 3em; 
+        }
+        & .btn__detail {
+            width: 10em;
             height: 3em; 
         }
 }

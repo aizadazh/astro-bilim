@@ -1,26 +1,29 @@
 .slider__wrapper{
-    width: 88.5%;
+    width: 89%;
     margin: 0 auto;
-    height:60vh;
-    
-    .slider__item1{
-        background: url(../images/111.jpg) no-repeat;
+    height:60vh;    
+    .slider__item{       
         height: 22rem;
-    }
-    .slider__item2{
-        background: url(../images/222.jpg) no-repeat;
-        height: 22rem;
-    }
-    .slider__item3{
-        background: url(../images/333.jpg) no-repeat;
-        height: 22rem;
-    }
-    .slider__item4{
-        background: url(../images/444.jpeg) no-repeat;
-        height: 22rem;
-    }
-    .slider__item5{
-        background: url(../images/555.jpg) no-repeat;
-        height: 22rem;
+        position: relative; 
+        .slider-image {
+            z-index: -100;
+        }
+        .slider-info{
+            max-width: 30em;
+            position: absolute;
+            top:10%;
+            left: 20%;
+            .title{
+                color: white;
+                font-family: cursive;
+                font-weight: 400;
+                font-size: 2em;
+            }
+            .description{
+                color: white;
+                font-family: cursive;
+                font-weight: 400;
+            }
+        }      
     }
 }
