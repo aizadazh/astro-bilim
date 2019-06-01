@@ -5,7 +5,7 @@ class HoroPage extends Component{
   render(){
     return (
       <div>
-        <h1>Гороскоп</h1>
+        <h1>Астропрогноз</h1>
       </div>       
     )
   }

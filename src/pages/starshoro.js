@@ -2,14 +2,14 @@ import React, { Component } from "react";
 
 
 
-class FeedbackPage extends Component{
+class StarsHoroPage extends Component{
   render(){
     return (        
       <h1>
-        Отзывы
+        Гороскопы звезд
       </h1>              
     )
   }
 }
 
-export default FeedbackPage;
+export default StarsHoroPage;

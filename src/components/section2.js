@@ -15,7 +15,7 @@ class Section2 extends Component {
   class Title extends Component {  
     render(){
       return (        
-        <h2 className="display2">НАТАЛЬНАЯ КАРТА</h2>        
+        <h2 className="display2">АСТРОПРОГНОЗ ДЛЯ ВСЕХ ЗНАКОВ ЗОДИАКА</h2>        
       )
     }
   }

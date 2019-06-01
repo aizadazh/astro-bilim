@@ -2,7 +2,7 @@ import React from "react";
 import HoroPage from "./pages/horo";
 import HomePage from "./pages/home";
 import ArticlePage from "./pages/article";
-import FeedbackPage from "./pages/feedback";
+import StarsHoroPage from "./pages/starshoro";
 import ServicePage from "./pages/services";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -12,9 +12,9 @@ class App extends React.Component {
       <Router>
         <>
           <Route path="/" exact component={HomePage} />
-          <Route path="/horo" component={HoroPage} />          
-          <Route path="/article" component={ArticlePage} />
-          <Route path="/feedback" component={FeedbackPage} /> 
+          <Route path="/horo" component={HoroPage} />
+          <Route path="/starshoro" component={StarsHoroPage} />           
+          <Route path="/article" component={ArticlePage} />          
           <Route path="/service" component={ServicePage} />         
         </>
       </Router>
