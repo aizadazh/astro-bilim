@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Welcome from "./Welcome";
-import Section2 from "./Section2";
+import AstroPrediction from "./AstroPrediction";
 import "./main.scss" 
 
 class Main extends Component {  
@@ -20,7 +20,7 @@ class Block1 extends Component {
   render(){
     return (
       <div className="main__content1">        
-        <Section2 />
+        <AstroPrediction />
       </div> 
     )
   }

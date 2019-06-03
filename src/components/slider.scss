@@ -1,18 +1,18 @@
-.slider__wrapper{
-    width: 89%;
-    margin: 0 auto;
+.slider__wrapper{    
+    margin: 1rem 0;
+    margin-left: 2rem;
+    margin-right: 0;
+    padding-right: 0;
     height:60vh;    
     .slider__item{       
         height: 22rem;
         position: relative; 
-        .slider-image {
-            z-index: -100;
-        }
         .slider-info{
-            max-width: 30em;
+            max-width: 40em;
             position: absolute;
             top:10%;
-            left: 20%;
+            left: 25%;
+            text-align: center;
             .title{
                 color: white;
                 font-family: cursive;
@@ -23,6 +23,7 @@
                 color: white;
                 font-family: cursive;
                 font-weight: 400;
+                font-size: 1.2em;
             }
         }      
     }

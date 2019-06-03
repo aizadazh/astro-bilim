@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-
+import { MainLayout } from "../components";
 
 
 class StarsHoroPage extends Component{
   render(){
     return (        
-      <h1>
-        Гороскопы звезд
-      </h1>              
+      <MainLayout>    
+        
+      </MainLayout>              
     )
   }
 }

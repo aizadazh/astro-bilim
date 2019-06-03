@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-
+import { MainLayout } from "../components";
 
 class HoroPage extends Component{
   render(){
     return (
-      <div>
-        <h1>Астропрогноз</h1>
-      </div>       
+      <MainLayout>    
+        
+      </MainLayout>         
     )
   }
 }

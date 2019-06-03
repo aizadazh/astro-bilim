@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import Header from "./Header";
-import Main from "./Main";
 import Footer from "./Footer";
 
 
@@ -9,10 +8,7 @@ class MainLayout extends Component{
     return (
       <Fragment>
         <Header />
-        <Main />        
-        <div className="body">
-          {this.props.children}
-        </div>
+        {this.props.children}     
         <Footer />
       </Fragment>
     )

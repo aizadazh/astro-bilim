@@ -24,7 +24,7 @@ class FooterInfo extends Component{
           <a href="https://www.instagram.com/astro.bilim.vedy"><img className="social-network-icon" src={whatsapp} alt={whatsapp} /></a>
           <a href="https://www.instagram.com/astro.bilim.vedy"><img className="social-network-icon__email" src={email} alt={email} /></a>
         </div>
-        <div class="copyright-info">
+        <div className="copyright-info">
           <span className="info">© Copyright 2019-2021 Астропроект «ASTRO-BILIM» All rights reserved.</span>
           <span className="info">Автор и разработчик: Aizada Zhumalieva, aizada-jumalieva@mail.ru</span>
         </div>

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { ArtLayout } from "../components";
+import { MainLayout } from "../components";
 
 class ArticlePage extends Component{
   render(){
     return (
-      <ArtLayout>    
+      <MainLayout>    
         
-      </ArtLayout>       
+      </MainLayout>       
     )
   }
 }

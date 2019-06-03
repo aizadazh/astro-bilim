@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./section2.scss" 
+import "./astroprediction.scss" 
 
-class Section2 extends Component {  
+class AstroPrediction extends Component {  
     render(){
       return (
         <div className="section">
@@ -46,4 +46,4 @@ class Section2 extends Component {
       )
     }
   }
-  export default Section2
+  export default AstroPrediction
