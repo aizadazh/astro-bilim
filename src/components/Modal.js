@@ -85,7 +85,7 @@ class Modal extends Component {
                     <div className="modal-header">
                         <h2 className="display2">Вход</h2>                       
                     </div>
-                    <form className="form-group-content" onSubmit={this.handleLoginSubmit}>                        
+                    <form action="/login" method="post" className="form-group-content" onSubmit={this.handleLoginSubmit}>                        
                         <label className="label-info">Введите электронную почту</label>
                         <input className="modal-input"
                             type="email"

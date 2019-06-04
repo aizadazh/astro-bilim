@@ -15,7 +15,7 @@ class App extends React.Component {
           <Route path="/horo" component={HoroPage} />
           <Route path="/starshoro" component={StarsHoroPage} />           
           <Route path="/article" component={ArticlePage} />          
-          <Route path="/service" component={ServicePage} />         
+          <Route path="/services" component={ServicePage} />         
         </>
       </Router>
     );

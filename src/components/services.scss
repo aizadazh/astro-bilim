@@ -1,5 +1,19 @@
-.services {
-    
-    width: 100%;
+.services-wrapper {    
     max-width: 1200px;
+    margin: 0 auto;
+    .services {
+        display: flex;
+        justify-content: space-between;
+        .service-images{
+            width: 17em;
+            height: 10em;
+        }
+    .service-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: space-between;
+    }
+    
+    }
 }

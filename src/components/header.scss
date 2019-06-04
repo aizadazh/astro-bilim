@@ -27,15 +27,16 @@
         align-items: flex-start;        
         margin-top: 2rem; 
         margin-right:2rem;
-        position: relative;        
-        .menu__item{
+        position: relative;              
+        :Link{
             text-decoration: none;
-            font-size: 1.5rem;           
-            font-family: cursive; 
+            font-size: 1.5rem; 
+            font-family: cursive;
             color: white;                       
         }
         .menu__list {
             list-style-type: none;
+            
            
             &:hover {
                 .submenu {
