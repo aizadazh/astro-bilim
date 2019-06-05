@@ -4,10 +4,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./slider.scss";
-import "./button.scss";
 import i1 from "../images/111.jpg";
 import i2 from "../images/222.jpg";
-import i3 from "../images/333.jpg";
+import i3 from "../images/i3.jpg";
 import i4 from "../images/444.jpeg";
 import i5 from "../images/555.jpg";
 
@@ -23,7 +22,7 @@ class ServiceSlider extends Component {
       autoplaySpeed: 2000
     };
     return (
-      <div className="slider__wrapper">
+      <div className="slider-wrapper">
         <Slider {...settings}>
           <Slide image={i1} title="НАТАЛЬНАЯ КАРТА" description="Поможет узнать, от кого ваш ребенок или вы переняли свою жизненную программу, какие сферы работы лучше подходят, какие периоды вашей жизни будут удачными" />
           <Slide image={i2} title="НАТАЛЬНАЯ КАРТА РЕБЕНКА" description="Для подрастающего маленького человечка очень важно составить персональную натальную карту." />

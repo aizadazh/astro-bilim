@@ -1,9 +1,9 @@
-.slider__wrapper{    
-    margin: 1rem 0;
-    margin-left: 2rem;
-    margin-right: 0;
-    padding-right: 0;
-    height:60vh;    
+.slider-wrapper{ 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;  
+    height:60vh;
+    margin-top: 0.3rem;
     .slider__item{       
         height: 22rem;
         position: relative; 
@@ -24,6 +24,23 @@
                 font-family: cursive;
                 font-weight: 400;
                 font-size: 1.2em;
+            }
+            .btn{
+                display: inline-block;
+                text-align: center;
+                text-decoration: none;             
+                border: 0.1em solid white;
+                border-radius: 5px;  
+                padding: 0.6em;      
+                color: white;
+                background: transparent; 
+                margin-right:1.5em;   
+                font-family: cursive;          
+                cursor: pointer;        
+                &:hover{
+                    background-color: red;
+                    border: 2px solid red;   
+                }
             }
         }      
     }

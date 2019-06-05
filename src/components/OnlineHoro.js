@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./astroprediction.scss" 
+import "./onlinehoro.scss" 
 
-class AstroPrediction extends Component {  
+class OnlineHoro extends Component {  
     render(){
       return (
         <div className="section">
@@ -46,4 +46,4 @@ class AstroPrediction extends Component {
       )
     }
   }
-  export default AstroPrediction
+  export default OnlineHoro

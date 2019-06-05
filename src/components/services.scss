@@ -5,14 +5,31 @@
         display: flex;
         justify-content: space-between;
         .service-images{
-            width: 17em;
+            width: 25%;
             height: 10em;
+            margin-top:1.5rem;
+            margin-right: 2rem;
         }
     .service-section{
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: space-between;
+        width:70%;        
+        height: 15em;
+        overflow: auto;
+        margin-bottom: 1.5rem;
+        .service-title{
+            font-family: cursive;
+            color: #060620;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+        .service-description{
+            font-family: cursive;
+            color: #060620;
+            line-height: 150%;
+            text-align: justify;
+            padding-right: 1.5rem;
+        }
+        
+
     }
     
     }

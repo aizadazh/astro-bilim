@@ -41,8 +41,8 @@ class Nav extends Component {
             <li className="menu__list"><a className="submenu__item" href="/">Выбор даты</a></li>
           </ul>          
         </li>
-        <li><Link style={{color: "white"}} to="/horo">Астропрогноз</Link></li>
-        <li><Link style={{color: "white"}} to="/starshoro">Гороскопы звезд</Link></li>
+        <li><Link style={{color: "white"}} to="/horo">Гороскоп онлайн</Link></li>
+        <li><Link style={{color: "white"}} to="/starshoro">Знаки асценденты</Link></li>
         <li><Link style={{color: "white"}} to="/article">Статьи</Link></li>
       </ul>     
     );
