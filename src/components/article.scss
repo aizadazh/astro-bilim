@@ -4,31 +4,27 @@
 .close-button{
     float: right;    
     text-align: center;
-    text-decoration: none;             
-    border: 0.1em solid white;
-    border-radius: 5px;  
+    text-decoration: none;   
     padding: 0.2em;      
-    color: white;
-    background: #060620; 
+    color: #060620;   
     margin-right:1em;   
     font-family: cursive; 
     font-weight: 300;
-    font-size:1em; 
-    width:8em;
-    height: 2em;        
+    font-size: 1em;           
     cursor: pointer;        
     &:hover{
-        background-color: red;
-        border: 2px solid red;   
+        background-color: #2F4F4F;
+        border: 2px solid #2F4F4F;  
     }
 }
 h2{
-    color: #060620;
+    color: #800000;
 }
 .article-body{
     text-align:justify;
     line-height: 150%;
     padding-right: 2rem;
+    color: #2F4F4F;
 }
 h6{
     color: grey;

@@ -3,25 +3,18 @@ import "./article.scss";
 import "./base.scss";
 
 class Article extends PureComponent {  
-
-/*
-    shouldComponentUpdate(nextProps, nextState) {
+    /* shouldComponentUpdate(nextProps, nextState) {
         return this.state.isOpen !== nextState.isOpen
     }
-*/
-
+    */
     componentWillMount() {
         console.log('---', 'mounting')
     }
-
-/*
     componentWillReceiveProps(nextProps) {
         if (nextProps.defaultOpen !== this.props.defaultOpen) this.setState({
             isOpen: nextProps.defaultOpen
         })
     }
-*/
-
     componentWillUpdate() {
         console.log('---', 'will update')
     }
@@ -36,13 +29,13 @@ class Article extends PureComponent {
                     <h2>
                         {article.title}
                         <button onClick={onButtonClick} className="close-button">
-                            {isOpen ? 'Закрыть' : 'Подробнее'}
+                            {isOpen ? 'Пропустить' : 'Читать далее...'}
                         </button>
                     </h2>
                 </div>
                 <div className="article-body">
                     <h6 className="article-date">
-                        creation date: {(new Date(article.date)).toDateString()}
+                        Дата публикации: {(new Date(article.date)).toDateString()}
                     </h6>
                     {body}
                 </div>
