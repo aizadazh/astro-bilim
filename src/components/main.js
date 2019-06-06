@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import OnlineHoro from "./OnlineHoro";
 import "./main.scss";
@@ -46,18 +47,42 @@ class Block2 extends Component {
       <div className="main__content2">
         <h2 className="display2">ВОСХОДЯЩИЕ ЗНАКИ</h2>
         <div className="zodiaks">
-          <img src={oven} alt="oven" />
-          <img src={telets} alt="telets" />
-          <img src={bliznetsi} alt="bliznetsi" />
-          <img src={rak} alt="rak" />
-          <img src={lev} alt="lev" />
-          <img src={deva} alt="deva" />
-          <img src={vesi} alt="vesi" />
-          <img src={scorpion} alt="scorpion" />
-          <img src={strelets} alt="strelets" />
-          <img src={kozerog} alt="kozerog" />
-          <img src={vodoley} alt="vodoley" />
-          <img src={ribi} alt="ribi" />
+          <div className="demo1">
+            <Link to="/oven"><img className="zodiak-image" src={oven} alt="oven" /></Link>
+          </div> 
+          <div className="demo1">       
+            <img className="zodiak-image" src={telets} alt="telets" />  
+          </div>
+          <div className="demo1">           
+          <img className="zodiak-image" src={bliznetsi} alt="bliznetsi" />
+          </div>
+          <div className="demo1">  
+            <img className="zodiak-image" src={rak} alt="rak" />
+          </div> 
+          <div className="demo1">  
+            <img className="zodiak-image" src={lev} alt="lev" />
+          </div> 
+          <div className="demo1">  
+            <img className="zodiak-image" src={deva} alt="deva" />
+          </div> 
+          <div className="demo1">  
+            <img className="zodiak-image" src={vesi} alt="vesi" />
+          </div> 
+          <div className="demo1">  
+            <img className="zodiak-image" src={scorpion} alt="scorpion" />
+          </div>
+          <div className="demo1">  
+            <img className="zodiak-image" src={strelets} alt="strelets" />
+          </div>
+          <div className="demo1">  
+            <img className="zodiak-image" src={kozerog} alt="kozerog" />
+          </div>
+          <div className="demo1">  
+            <img className="zodiak-image" src={vodoley} alt="vodoley" />
+          </div>
+          <div className="demo1">  
+            <img className="zodiak-image" src={ribi} alt="ribi" />
+          </div>
         </div>
         
       </div> 

@@ -27,7 +27,7 @@ class Modal extends Component {
             e.preventDefault();
             this.setState({
                 logModal: true,
-                // regModal: false,
+                regModal: false,
                 email: '',
                 password: '',
         })};
@@ -35,7 +35,7 @@ class Modal extends Component {
         openRegModal(e) {
             e.preventDefault();
             this.setState({
-                // logModal: false,
+                logModal: false,
                 regModal: true,
                 firstName: '',
                 lastName: '',

@@ -4,6 +4,7 @@ import HomePage from "./pages/home";
 import ArticlePage from "./pages/article";
 import StarsHoroPage from "./pages/starshoro";
 import ServicePage from "./pages/services";
+import ZnakOven from "./pages/oven";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -15,7 +16,8 @@ class App extends React.Component {
           <Route path="/horo" component={HoroPage} />
           <Route path="/starshoro" component={StarsHoroPage} />           
           <Route path="/article" component={ArticlePage} />          
-          <Route path="/services" component={ServicePage} />         
+          <Route path="/services" component={ServicePage} />   
+          <Route path="/oven" component={ZnakOven} />                
         </>
       </Router>
     );
