@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-import "./welcome.scss" 
-import "./base.scss"
+import "./welcome.scss";
 
 class Welcome extends Component {  
   render(){
-    return (         
-      <div className="container"> 
-        <div className="welcome-base">           
-          <Presentation />
-          <Form />
-        </div>    
-      </div>
+    return ( 
+      <div className="welcome-base">           
+        <Presentation />
+        <Form />
+      </div>   
     )
   }
 }

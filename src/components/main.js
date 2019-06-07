@@ -21,12 +21,14 @@ import artimg2 from "../images/2.jpg";
 class Main extends Component {  
   render(){
     return (
-      <main className="main">
-        <Welcome />
-        <Block1 />
-        <Block2 />
-        <Block3 />                
-      </main>
+      <div className="container">
+        <main className="main">
+          <Welcome />
+          <Block1 />
+          <Block2 />
+          <Block3 />                
+        </main>
+      </div>
     )
   }
 }

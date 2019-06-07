@@ -8,9 +8,11 @@ import email from "../icons/e.png";
 class Footer extends Component{
   render(){
     return (
-      <footer className="footer">
-        <FooterInfo />  
-      </footer>
+      <div className="container">
+        <footer className="footer">
+          <FooterInfo />  
+        </footer>
+      </div>
       )
   }
 }

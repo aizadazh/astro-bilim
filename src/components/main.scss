@@ -6,14 +6,11 @@
     max-width: 1200px;      
     .main__content1{
         height: 100vh;             
-        background: url(../images/background3.png) no-repeat;
-        background-size: cover;         
+        background: #ececec;                
     }
     .main__content2{        
         height: 100vh;        
-        background: url(../images/background2.jpg) no-repeat;
-        background-size: cover;
-        padding-left: 2rem;
+        background: #272727;        
        
         .zodiaks{
             margin: 0 auto;
@@ -37,16 +34,15 @@
             } 
         }          
             img{
-                width: 15em;
-                height:10em;  
+                width: 12em;
+                height:8em;  
             }
             
         }      
     } 
     .main__content3{
         height: 100vh;        
-        background: url(../images/background4.jpg) no-repeat;
-        background-size: cover; 
+        background:#fcd250;       
     }
     .article-box{    
         display: grid;
@@ -55,8 +51,9 @@
         grid-gap: 2rem;
         margin: 0 2rem;
         .article-section{
-           color: white; 
-           text-align: justify;           
+           color: #272727; 
+           text-align: justify; 
+           overflow: hidden;          
             img{
                 float: left;
                 width:18em;

@@ -1,5 +1,5 @@
 .display2{
-    color: white;
+    color: #ececec;
     font-family: cursive;
     font-weight: bold;
     text-align: center;
@@ -15,18 +15,18 @@
         flex-direction: column;
         width: 250px;
         height: 450px;
-        border: 1px solid white;
+        border: 1px solid #ececec;
         border-radius: 10px;
         overflow: scroll;
         .display3{
             text-align: center;
             font-family: cursive;
-            color: white;
+            color: #ececec;
         }
         .subsection__natal-text {
             font-family: cursive;
             font-size: 1em;
-            color: white;
+            color: #ececec;
             text-align: justify;
             padding: 0 0.5em;  
         }       

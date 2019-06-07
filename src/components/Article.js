@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import "./article.scss";
-import "./base.scss";
+
 
 class Article extends PureComponent {  
     /* shouldComponentUpdate(nextProps, nextState) {

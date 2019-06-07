@@ -1,163 +1,134 @@
 import React, { Component } from "react";
-import "./modal.scss" 
-import "./base.scss"
-import "./button.scss"
+import { Modal, Button, FormGroup, FormLabel, FormControl  } from "react-bootstrap";
+require("react-bootstrap/ModalHeader");
+require("react-bootstrap/ModalFooter");
+require("react-bootstrap/ModalBody");
+require("react-bootstrap/ModalTitle");
+require("react-bootstrap/ModalDialog");
 
-class Modal extends Component { 
+class ModalWindow extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            logModal: false,
-            regModal: false,
-            firstName: '',
-            lastName: '',
-            email: '',
-            password: '',
-        };
-    
-        this.openLogModal = this.openLogModal.bind(this);
-        this.openRegModal = this.openRegModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
-        this.handleRegistrationSubmit = this.handleRegistrationSubmit.bind(this);
-      }
-    
-        openLogModal(e) {
-            e.preventDefault();
-            this.setState({
-                logModal: true,
-                regModal: false,
-                email: '',
-                password: '',
-        })};
-      
-        openRegModal(e) {
-            e.preventDefault();
-            this.setState({
-                logModal: false,
-                regModal: true,
-                firstName: '',
-                lastName: '',
-                email: '',
-                password: '',
-        })};
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose = this.handleClose.bind(this);
 
-        closeModal() {
-            this.setState({                 
-                logModal: false,
-                regModal: false 
-        })};
+    this.state = {
+      show: false,
+    };
+  }
 
-        handleChange = (e) => {
-            this.setState({ 
-                [e.target.name]: e.target.value 
-        })};
+    handleClose() {
+        this.setState({ show: false });
+    }
 
-        handleLoginSubmit(e) {
-            e.preventDefault();
-            // const innerState = {...this.state};
-            // const dataToSend = JSON.stringify({              
-            //     "email": innerState.email, 
-            //     "password": innerState.password
-            // })
-        }
-        handleRegistrationSubmit(e) {
-            e.preventDefault();
-            // const innerState = {...this.state};
-            // const dataToSend = JSON.stringify({              
-            //     "firstName": innerState.firstName, 
-            //     "lastName": innerState.lastName,
-            //     "email": innerState.email, 
-            //     "password": innerState.password
-            // })
-        }
-             
-  render(){
-    return (        
-        <div className="modal-wrapper">
-            <div className="log-reg">          
-                <button onClick={this.openLogModal} className="btn btn__entry">Вход</button>
-                <button onClick={this.openRegModal} className="btn btn__reg">Регистрация</button>
-            </div>
-            <div className="modal-window"> 
-                <div className="log-modal" isOpen={this.state.logModal}>
-                    <div className="modal-header">
-                        <h2 className="display2">Вход</h2>                       
-                    </div>
-                    <form action="/login" method="post" className="form-group-content" onSubmit={this.handleLoginSubmit}>                        
-                        <label className="label-info">Введите электронную почту</label>
-                        <input className="modal-input"
-                            type="email"
-                            name="email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                        />                    
-                        <label className="label-info">Введите пароль</label>
-                        <input className="modal-input"
-                            type="password"
-                            name="password"
-                            value={this.state.password}
-                            onChange={this.handleChange}
-                        />                 
-                    <div className="modal-footer">
-                        <button type="submit">Вход</button>{' '}
-                        <button onClick={this.closeModal}>Отмена</button>
-                    </div>
-                </form>
-                </div>
-            </div>
-            <div className="modal-window"> 
-                <div className="reg-modal" isOpen={this.state.regModal}>
-                    <div className="modal-header">
-                        <h2 className="display2">Регистрация</h2>
-                    </div>
-                        <form className="form-group-content" onSubmit={this.handleRegistrationSubmit}>                            
-                            <label className="label-info">Имя</label>
-                            <input className="modal-input"
+    handleShow() {
+        this.setState({ show: true });
+    }
+
+    render(){
+        return (
+            <>            
+            <Button variant="btn btn-light" onClick={this.handleShow}>Вход</Button>
+            <Button variant="btn btn-dark mr-3" onClick={this.handleShow}>Регистрация</Button>          
+            <Modal.Dialog>
+                <Modal 
+                    show={this.state.show} 
+                    onHide={this.handleClose}                      
+                    dialogClassName="modal-90w"
+                    aria-labelledby="example-custom-modal-styling-title">
+                    <Modal.Header closeButton>
+                        <Modal.Title>Вход</Modal.Title>
+                    </Modal.Header>                       
+                    <Modal.Body>
+                        <FormGroup>
+                            <FormLabel>Email</FormLabel>
+                            <FormControl
+                                type="email"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                placeholder="Email"
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <FormLabel>Пароль</FormLabel>
+                            <FormControl
+                                type="password"
+                                name="password"
+                                value={this.state.password}
+                                onChange={this.handleChange}
+                                placeholder="Пароль"
+                            />
+                        </FormGroup>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="light" onClick={this.handleClose}>Войти</Button>
+                        <Button variant="dark" onClick={this.handleClose}>Отмена</Button>
+                    </Modal.Footer>                   
+                </Modal>
+            </Modal.Dialog>
+            <Modal.Dialog>
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>
+                        Регистрация
+                        </Modal.Title>
+                    </Modal.Header>                            
+                    <Modal.Body>
+                        <FormGroup>
+                            <FormLabel>Имя</FormLabel>
+                            <FormControl
                                 type="text"
                                 name="firstName"
                                 placeholder="Имя"
                                 value={this.state.firstName}
                                 onChange={this.handleChange}
                                 required
-                            />                   
-                            <label className="label-info">Фамилия</label>
-                            <input className="modal-input"
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <FormLabel>Фамилия</FormLabel>
+                            <FormControl
                                 type="text"
                                 name="lastName"
                                 placeholder="Фамилия"
                                 value={this.state.lastName}
                                 onChange={this.handleChange}
                                 required
-                            />                     
-                            <label className="label-info">Email</label>
-                            <input className="modal-input"
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <FormLabel>Email</FormLabel>
+                            <FormControl
                                 type="email"
                                 name="email"
                                 placeholder="Email"
                                 value={this.state.email}
                                 onChange={this.handleChange}
                                 required
-                            />                
-                            <label className="label-info">Пароль</label>
-                            <input className="modal-input"
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <FormLabel>Пароль</FormLabel>
+                            <FormControl
                                 type="password"
                                 name="password"
                                 placeholder="Пароль"
                                 value={this.state.password}
                                 onChange={this.handleChange}
                                 required
-                            />                 
-                        <div className="modal-footer">
-                            <button type="submit">Регистрация</button>{' '}
-                            <button onClick={this.closeModal}>Отмена</button>
-                        </div>
-                    </form>
-                </div>           
-            </div>
-        </div>
-    )
-  }
+                            />
+                        </FormGroup>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="dark" onClick={this.handleClose}>Регистрация</Button>
+                        <Button variant="light" onClick={this.handleClose}>Отмена</Button>
+                    </Modal.Footer>                       
+                </Modal>
+            </Modal.Dialog>
+           </>
+        )
+    }
 }
-export default Modal
+  
+export default (ModalWindow)  
