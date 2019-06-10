@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./welcome.scss";
+import rak from "../images/rakrak.png";
 
 class Welcome extends Component {  
   render(){
@@ -15,8 +16,9 @@ class Presentation extends Component {
   render(){
     return (
       <div className="welcome">
-        <h1 className="welcome__title">Хотите быть счастливым, успешным и здоровым!</h1>
-        <h3 className="welcome__description">Гармонизируйте свою жизнь с помощью самопознания! Запишитесь на предварительную самодиагностику!</h3>        
+        <h1 className="welcome__title">Гармонизируйте свою жизнь с помощью самопознания!</h1>
+        <h3 className="welcome__description"> Запишитесь на предварительную самодиагностику БЕЗ ОПЛАТНО!</h3>
+        <img className="rak" src={rak} alt="rak" />
       </div>
     )
   }

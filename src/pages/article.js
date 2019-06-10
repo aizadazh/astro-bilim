@@ -4,19 +4,14 @@ import ArticleList from '../components/ArticleList';
 import articles from '../components/fixture';
 
 const divStyle={  
-  margin: '0 auto',
-  width: '100%',
-  maxWidth: '1200px',  
-  height:'20vh',
-  marginTop: '0.3rem',
-  background: '#060620',
+  margin: '1rem 0',  
+  height:'20vh',  
+  background: '#fcd250',
 };
-const hStyle={  
-  width: '100%',
-  maxWidth: '1200px',  
+const hStyle={   
   textAlign: 'center',
   paddingTop: '2.3rem',
-  color: 'white',
+  color: '#272727',
 };
 class ArticlePage extends PureComponent{
   state = {
@@ -27,12 +22,14 @@ class ArticlePage extends PureComponent{
   render(){
     return (
       <MainLayout>
-        <div style={divStyle}>
-          <h1 style={hStyle}>
-            Статьи для обсуждения            
-          </h1>
-        </div>
-        <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles}/>        
+        <div className="container">
+          <div style={divStyle}>
+            <h1 style={hStyle}>
+              Статьи для обсуждения            
+            </h1>
+          </div>
+          <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles}/> 
+        </div>       
       </MainLayout>       
     )
   }

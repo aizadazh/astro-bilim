@@ -20,18 +20,17 @@ class Article extends PureComponent {
     }
 
     render() {
-        const {article, isOpen, onButtonClick} = this.props
-        const style = {width: '100%'}
+        const {article, isOpen, onButtonClick} = this.props       
         const body = isOpen && <section className="card-text">{article.text}</section>
         return (
-            <div className="container" style = {style}>
+            <div>
                 <div className="card-header">
-                    <h2>
+                    <h3>
                         {article.title}
                         <button onClick={onButtonClick} className="close-button">
                             {isOpen ? 'Пропустить' : 'Читать далее...'}
                         </button>
-                    </h2>
+                    </h3>
                 </div>
                 <div className="article-body">
                     <h6 className="article-date">
