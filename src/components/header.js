@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ModalWindow from "./Modal"
-import "./header.scss" 
+import ModalWindow from "./Modal";
+import "./header.scss";
+import { Container } from "react-bootstrap";
 
 
 
 class Header extends Component {  
   render(){
     return (
-      <div className="container">
+      <Container>
         <header className="header">
           <Logo />
           <Nav />
           <ModalWindow />                  
         </header>       
-     </div>
+     </Container>
     )
   }
 }

@@ -1,20 +1,20 @@
-.services-wrapper {    
-    max-width: 1200px;
+.services-wrapper { 
     margin: 0 auto;
+    background: #ececec;
+    padding-top: 0;
     .services {
         display: flex;
         justify-content: space-between;
         .service-images{
             width: 25%;
             height: 10em;
-            margin-top:1.5rem;
-            margin-right: 2rem;
+            margin: 0.5rem 1.5rem;
         }
     .service-section{
         width:70%;        
-        height: 15em;
-        overflow: auto;
-        margin-bottom: 1.5rem;
+        height: 16em;
+        overflow: scroll;
+        margin-bottom: 1rem;
         .service-title{
             font-family: cursive;
             color: #060620;

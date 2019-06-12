@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import OnlineHoro from "./OnlineHoro";
+import Block3 from "./Block3";
 import "./main.scss";
+import "./onlinehoro.scss";
 import oven from "../images/oven.jpg";
 import telets from "../images/telets.jpg";
 import bliznetsi from "../images/bliznetsi.jpg";
@@ -15,113 +17,146 @@ import strelets from "../images/strelets.jpg";
 import kozerog from "../images/kozerog.jpg";
 import vodoley from "../images/vodoley.jpg";
 import ribi from "../images/ribi.jpg";
-import artimg from "../images/11.jpg";
-import artimg2 from "../images/2.jpg";
+import { Container, Card, CardGroup } from "react-bootstrap";
 
 class Main extends Component {  
   render(){
     return (
-      <div className="container">
-        <main className="main">
-          <Welcome />
-          <Block1 />
-          <Block2 />
-          <Block3 />                
-        </main>
-      </div>
+      <Container>       
+        <Welcome />
+        <OnlineHoro />
+        <Block2 />
+        <Block3 />          
+      </Container>
     )
   }
 }
 
-class Block1 extends Component {  
-  render(){
-    return (
-      <div className="main__content1">        
-        <OnlineHoro />
-      </div> 
-    )
-  }
-}
 
 class Block2 extends Component {  
   render(){
     return (
       <div className="main__content2">
-        <h2 className="display2">ВОСХОДЯЩИЕ ЗНАКИ</h2>
-        <div className="zodiaks">
-          <div className="demo1">
-            <Link to="/oven"><img className="zodiak-image" src={oven} alt="oven" /></Link>
-          </div> 
-          <div className="demo1">       
-            <img className="zodiak-image" src={telets} alt="telets" />  
-          </div>
-          <div className="demo1">           
-          <img className="zodiak-image" src={bliznetsi} alt="bliznetsi" />
-          </div>
-          <div className="demo1">  
-            <img className="zodiak-image" src={rak} alt="rak" />
-          </div> 
-          <div className="demo1">  
-            <img className="zodiak-image" src={lev} alt="lev" />
-          </div> 
-          <div className="demo1">  
-            <img className="zodiak-image" src={deva} alt="deva" />
-          </div> 
-          <div className="demo1">  
-            <img className="zodiak-image" src={vesi} alt="vesi" />
-          </div> 
-          <div className="demo1">  
-            <img className="zodiak-image" src={scorpion} alt="scorpion" />
-          </div>
-          <div className="demo1">  
-            <img className="zodiak-image" src={strelets} alt="strelets" />
-          </div>
-          <div className="demo1">  
-            <img className="zodiak-image" src={kozerog} alt="kozerog" />
-          </div>
-          <div className="demo1">  
-            <img className="zodiak-image" src={vodoley} alt="vodoley" />
-          </div>
-          <div className="demo1">  
-            <img className="zodiak-image" src={ribi} alt="ribi" />
-          </div>
-        </div>
+        <h3 className="display3">ВОСХОДЯЩИЕ ЗНАКИ</h3>
+        <CardGroup>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={oven} alt="oven" /></Link>
+            <Card.Body>              
+              <Card.Text><h5>ОВЕН (Меша)</h5></Card.Text>
+              <Card.Footer>
+                <large className="text-muted">21 марта - 20 апреля.</large>
+              </Card.Footer>
+            </Card.Body>
+          </Card> 
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={telets} alt="telets" /></Link>
+            <Card.Body>              
+              <Card.Text>ТЕЛЕЦ (Вришабха)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">21 апреля - 20 мая</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card> 
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={bliznetsi} alt="bliznetsi" /></Link>
+            <Card.Body>              
+              <Card.Text>БЛИЗНЕЦЫ (Митхуна)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 мая - 21 июня</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={rak} alt="rak" /></Link>
+            <Card.Body>              
+              <Card.Text>РАК (Карка)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 июня - 21 июля</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+        <CardGroup>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={lev} alt="lev" /></Link>
+            <Card.Body>              
+              <Card.Text>ЛЕВ (Симха)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 июля - 21 августа</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={deva} alt="deva" /></Link>
+            <Card.Body>              
+              <Card.Text>ДЕВА (Канья)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 августа - 21 сентября</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={vesi} alt="vesi" /></Link>
+            <Card.Body>              
+              <Card.Text>ВЕСЫ (Тула)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 сентября - 21 октября</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={scorpion} alt="scorpion" /></Link>
+            <Card.Body>              
+              <Card.Text>СКОРПИОН (Вришчика)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 октября - 21 ноября</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          </CardGroup>
+          <CardGroup>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={strelets} alt="strelets" /></Link>
+            <Card.Body>              
+              <Card.Text>СТРЕЛЕЦ (Дханур)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 ноября - 21 декабря</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={kozerog} alt="kozerog" /></Link>
+            <Card.Body>              
+              <Card.Text>КОЗЕРОГ (Макара)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 декабря - 21 января</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={vodoley} alt="vodoley" /></Link>
+            <Card.Body>              
+              <Card.Text>ВОДОЛЕЙ (Кумбха)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 января - 21 февраля</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: '12rem' }}>
+            <Link to="/oven"><Card.Img variant="top" src={ribi} alt="ribi" /></Link>
+            <Card.Body>              
+              <Card.Text>РЫБЫ (Мина)</Card.Text>
+              <Card.Footer>
+                <small className="text-muted">22 февраля - 21 марта</small>
+              </Card.Footer>
+            </Card.Body>
+          </Card>
+        </CardGroup>
         
       </div> 
     )
   }
 }
-class Block3 extends Component {  
-  render(){
-    return (
-        <div className="main__content3">
-            <h2 className="display2">СТАТЬИ</h2>
-            <div className="article-box">
-              <div className="article-section">
-                <img src={artimg} alt="artimg"/>
-                <div className="article-info"> 
-                  <h3>Как найти астролога?</h3>
-                  <p>Тот, кто задался целью найти астролога уже стоит на правильном пути. Пути к изменению и улучшению своей жизни. Понимание этого уже ведет к личностному росту. Как найти хорошего астролога и где, в современном мире тоже не проблема. Вопрос стоит по-другому – найти одного, но того. Здесь важен и эмоциональный контакт и внутренняя честность. Только в парной работе можно разобраться в себе и направить свой Дух по кармическому пути без сожаления и сомнений. Найдя именно своего астролога, вы сможете понять все нюансы личного гороскопа, людей и обстоятельств в вашей жизни. Не очень разумно пытаться менять других, потому что изменяя себя (но не изменяя себе), мы приходим к неограниченным возможностям в жизни, понимая те глупости, которые уже сделаны. Это понимание и внутренняя честность в будущем позволят нам обойти ловушки, расставленные в нашем гороскопе. Ищите астролога, с которым вам будет комфортно общаться, и вы его обязательно найдете. Более подробно про услуги астролога читайте на главной странице сайта.</p>
-                </div>
-              </div> 
-              <div className="article-section">
-                <img src={artimg2} alt="artimg2"/>
-                <div className="article-info"> 
-                  <h3>Астрология и мир</h3>
-                  <p>Астрология показывает как работает мир. Как проявляется энергия мироздания: направление и цикличность. Позволяет познавать физическую плоскость и себя. Астрология дает возможность прогнозировать взаимодействие отдельных частей проявленного мира с единой реальностью, а также между собой. Эта наука является ключом к тайне бытия и позволяет ответить на множество вопросов, волнующих ум человека. Астрологическое учение достигло вершины развития несколько десятков тысяч лет назад. Древняя астрология основывалась на геоцентрической модели мира, все положения планет рассматривались с позиции земного наблюдателя. Принятие системы Коперника вызвало расхождение между астрологической традицией и астрономической наукой, которое сохраняется и сегодня. Современная астрология делится на следующие основные разделы:
-Кармическая астрология (влияние кармы, проблемы рода, жизненный путь);
-Натальная астрология (влияние планет, знаков, звезд на человека);
-Хорарная астрология (рассмотрение карты составленной на момент вопроса);
-Элективная астрология (для прогноза подходящего момента для действия);
-Мунданная астрология (астрология больших эгрегоров: города, регионы, страны)
-Медицинская астрология (вопросы здоровья).</p>
-                </div>
-              </div>             
-              
-            </div>
-        </div>     
-    )
-  }
-}
+
 
 export default Main

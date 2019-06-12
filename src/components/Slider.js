@@ -9,6 +9,7 @@ import i2 from "../images/222.jpg";
 import i3 from "../images/i3.jpg";
 import i4 from "../images/444.jpeg";
 import i5 from "../images/555.jpg";
+import { Container } from "react-bootstrap";
 
 class ServiceSlider extends Component {
   render() {
@@ -22,15 +23,17 @@ class ServiceSlider extends Component {
       autoplaySpeed: 2000
     };
     return (
-      <div className="slider-wrapper">
-        <Slider {...settings}>
-          <Slide image={i1} title="НАТАЛЬНАЯ КАРТА" description="Поможет узнать, от кого ваш ребенок или вы переняли свою жизненную программу, какие сферы работы лучше подходят, какие периоды вашей жизни будут удачными" />
-          <Slide image={i2} title="НАТАЛЬНАЯ КАРТА РЕБЕНКА" description="Для подрастающего маленького человечка очень важно составить персональную натальную карту." />
-          <Slide image={i3} title="ЛИЧНАЯ ЖИЗНЬ" description="Одним из частых вопросов, с которыми ко мне обращаются - это семейное консультирование" />
-          <Slide image={i4} title="ВЫБОР ДАТЫ" description="Выбор дня для1 регистрации брака — очень ответственное дело, мало кто подозревает, но от этого выбора во многом зависит продолжительность и счастье в браке" />
-          <Slide image={i5} title="КАРТА СОВМЕСТИМОСТИ" description="Подбор деловых партнеров поможет вам оптимизировать рабочий процесс, ведь очень важно понять на рабочем месте, кто окружает тебя и чего можно ожидать от каждого сотрудника" />
-        </Slider>
-      </div>
+      <Container>
+        <div className="slider-wrapper">
+          <Slider {...settings}>
+            <Slide image={i1} title="НАТАЛЬНАЯ КАРТА" description="Поможет узнать, от кого ваш ребенок или вы переняли свою жизненную программу, какие сферы работы лучше подходят, какие периоды вашей жизни будут удачными" />
+            <Slide image={i2} title="НАТАЛЬНАЯ КАРТА РЕБЕНКА" description="Для подрастающего маленького человечка очень важно составить персональную натальную карту." />
+            <Slide image={i3} title="ЛИЧНАЯ ЖИЗНЬ" description="Одним из частых вопросов, с которыми ко мне обращаются - это семейное консультирование" />
+            <Slide image={i4} title="ВЫБОР ДАТЫ" description="Выбор дня для1 регистрации брака — очень ответственное дело, мало кто подозревает, но от этого выбора во многом зависит продолжительность и счастье в браке" />
+            <Slide image={i5} title="КАРТА СОВМЕСТИМОСТИ" description="Подбор деловых партнеров поможет вам оптимизировать рабочий процесс, ведь очень важно понять на рабочем месте, кто окружает тебя и чего можно ожидать от каждого сотрудника" />
+          </Slider>
+        </div>
+      </Container>
     );
   }
 }
@@ -42,14 +45,16 @@ class Slide extends Component {
   };
   render() {
     return (
-      <div className="slider__item">
-        <img className="slider-image" src={this.props.image} alt="slider-img" />
-        <div className="slider-info">
-          <h3 className="title">{this.props.title}</h3>
-          <p className="description">{this.props.description}</p>
-          <button className="btn">ПОДРОБНЕЕ</button>
+      <Container>
+        <div className="slider__item">
+          <img className="slider-image" src={this.props.image} alt="slider-img" />
+          <div className="slider-info">
+            <h3 className="title">{this.props.title}</h3>
+            <p className="description">{this.props.description}</p>
+            <button className="btn">ПОДРОБНЕЕ</button>
+          </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }

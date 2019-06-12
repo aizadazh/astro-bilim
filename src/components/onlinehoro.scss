@@ -6,13 +6,12 @@ a{
     font-family: cursive;
     font-weight: bold;
     text-align: center;
-    padding-top: 1.5rem;   
-}
+   }
 .subsection{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem 1.5rem;      
+          
     .subsection__natal{
         display: flex;
         flex-direction: column;
@@ -42,10 +41,8 @@ a{
         }       
     }
 }  
-.btn__horo{
-    position: absolute;
-    top: 85%;
-    left: 75%;         
+.btn__horo{  
+    margin-left: 65%;          
     font-size: 1.5em; 
     font-family: cursive;             
     background: #272727;
@@ -53,9 +50,7 @@ a{
     color: #fcd250;
     border-radius: 5px;
     border: none;
-    cursor: pointer;
-
-    
+    cursor: pointer;    
 } 
 
 

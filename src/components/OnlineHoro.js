@@ -6,10 +6,10 @@ import bg2 from "../images/background3.png";
 class OnlineHoro extends Component {  
     render(){
       return (
-        <div className="section">
+        <div className="main__content1">
           <Title />
-          <Subsection />          
-          <Button />
+          <Subsection /> 
+          <Button />         
         </div> 
       )
     }
@@ -39,17 +39,22 @@ class Subsection extends Component {
           Конечно, вы можете идти наугад и обретать богатый опыт собственных ошибок. Но мне кажется, есть в вашей жизни и более приятный маршрут.
           И астрология будет вам надежным другом. Помните, индивидуальный гороскоп — это надежный инструмент.
           </span>
-        </div>           
-      </div> 
+        </div>
+        
+      </div>           
+      
+    )
+  }
+}
+class Button extends Component {  
+  render(){
+    return (        
+      <div className="button">
+        <a href="http://video-goroskop.ru/asc/"><button className="btn__horo" type="submit">Узнать свой асцендент</button></a> 
+      </div>      
     )
   }
 }
 
-class Button extends Component {  
-  render(){
-    return (
-      <a href="http://video-goroskop.ru/asc/"><button className="btn__horo" type="submit">Рассчитать карту</button></a>         
-    )
-  }
-}
+
 export default OnlineHoro

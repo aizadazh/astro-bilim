@@ -1,8 +1,9 @@
 .welcome-base{
-    height: 550px;        
+    height: 100%;        
     background: #fcd250;         
     display: flex; 
-    flex-direction: column;    
+    flex-direction: column;  
+    padding: 2rem 1rem;  
     .welcome{   
         display: flex;
         flex-direction: column;      
@@ -21,20 +22,17 @@
             font-family: cursive;
             font-size: 1.5em;
             text-align: center;
-        }
-        
-        @keyframes move {
-            from {
-                left: 5%;
-            }
-            to {
-                left: 85%;
-            }
-        }
+        }      
         .rak{
             width:3.5em;
-            height:3em;  
-        }
+            height:3em;               
+            transform-style: preserve-3d;            
+            transition: transform 1000ms ease 0ms, box-shadow 1000ms ease 0ms;                
+            &:hover {
+                transform: rotateX(0deg) rotateY(180deg);                
+                transition: transform 1000ms ease 0ms, box-shadow 1000ms ease 0ms;
+            }
+        } 
     }
     .form {  
         background: transparent;
