@@ -2,50 +2,50 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ModalWindow from "./Modal";
 import "./header.scss";
-import { Container } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
 
 
 class Header extends Component {  
   render(){
-    return (
-      <Container>
-        <header className="header">
-          <Logo />
-          <Nav />
-          <ModalWindow />                  
-        </header>       
-     </Container>
+    return (      
+      <header className="header">        
+        <HeaderContent />                            
+      </header>        
     )
   }
 }
-class Logo extends Component {  
+class HeaderContent extends Component {  
   render(){
-    return (
-      <div className="logo">
-        <a className="logo__text" href="/">ASTRO-BILIM</a>
-      </div>
+    return (      
+      <Container> 
+        <Navbar expand="lg" variant="dark" bg="dark">               
+          <Navbar.Brand><Link style={{color: "#fcd250", fontSize: "1.5em", fontWeight: "bold"}}to="/home">ASTRO-BILIM</Link></Navbar.Brand>
+          <Navigation />  
+          <ModalWindow />               
+        </Navbar>
+      </Container>       
     )
   }
 }
-class Nav extends Component {  
+class Navigation extends Component {  
   render(){
     return (
-      <ul className="menu">                         
-        <li className="menu__list"><Link style={{color: "#ececec"}} to="/services">Услуги</Link>
-          <ul className="submenu">
-            <li className="menu__list"><a className="submenu__item" href="/">Натальная карта</a></li>
-            <li className="menu__list"><a className="submenu__item" href="/">Натальная карта ребенка</a></li>
-            <li className="menu__list"><a className="submenu__item" href="/">Бизнес астрология</a></li>
-            <li className="menu__list"><a className="submenu__item" href="/">Карта совместимости</a></li>
-            <li className="menu__list"><a className="submenu__item" href="/">Личная жизнь</a></li>
-            <li className="menu__list"><a className="submenu__item" href="/">Выбор даты</a></li>
-          </ul>          
-        </li>
-        <li className="menu__list"><Link style={{color: "#ececec"}} to="/horo">Гороскоп</Link></li>
-        <li className="menu__list"><Link style={{color: "#ececec"}} to="/starshoro">Асцендент</Link></li>
-        <li className="menu__list"><Link style={{color: "#ececec"}} to="/article">Статьи</Link></li>
-      </ul>     
+      <Nav className="menu mr-auto">                         
+        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Услуги</Link>
+          <Nav className="submenu">
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Натальная карта</Link></Nav.Link>
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Натальная карта ребенка</Link></Nav.Link>
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Бизнес астрология</Link></Nav.Link>
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Карта совместимости</Link></Nav.Link>
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Личная жизнь</Link></Nav.Link>
+            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Выбор даты</Link></Nav.Link>
+          </Nav>          
+        </Nav.Link>
+        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/horo">Гороскоп</Link></Nav.Link>
+        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/starshoro">Асцендент</Link></Nav.Link>
+        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/article">Статьи</Link></Nav.Link>
+      </Nav>     
     );
   };
 };
