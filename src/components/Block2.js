@@ -18,9 +18,11 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 class BlockZodiaks extends Component {  
   render(){
     return (
-      <div className="main__content2">  
-        <Title /> 
-        <Block2 />                
+      <div className="main__content2"> 
+        <Container>        
+          <Title /> 
+          <Block2 />         
+        </Container>
       </div>
     )
   }
@@ -43,9 +45,8 @@ class Block2 extends Component {
   render(){
     return (
       <Container>
-        <Row>
-         
-            <Col xs>
+        <Row>         
+          <Col xs>
             <Card style={{ width: '12rem' }}>
               <Link to="/oven"><Card.Img variant="top" src={oven} alt="oven" /></Link>
               <Card.Body>              

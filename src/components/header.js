@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ModalWindow from "./Modal";
 import "./header.scss";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 
 
@@ -19,8 +19,9 @@ class HeaderContent extends Component {
   render(){
     return (      
       <Container> 
-        <Navbar expand="lg" variant="dark" bg="dark">               
-          <Navbar.Brand><Link style={{color: "#fcd250", fontSize: "1.5em", fontWeight: "bold"}}to="/home">ASTRO-BILIM</Link></Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" variant="dark" bg="dark">               
+          <Navbar.Brand><Link style={{color: "#fcd250", fontSize: "1.5em", fontWeight: "bold"}} to="/">ASTRO-BILIM</Link></Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navigation />  
           <ModalWindow />               
         </Navbar>
@@ -30,22 +31,23 @@ class HeaderContent extends Component {
 }
 class Navigation extends Component {  
   render(){
-    return (
-      <Nav className="menu mr-auto">                         
-        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Услуги</Link>
-          <Nav className="submenu">
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Натальная карта</Link></Nav.Link>
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Натальная карта ребенка</Link></Nav.Link>
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Бизнес астрология</Link></Nav.Link>
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Карта совместимости</Link></Nav.Link>
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Личная жизнь</Link></Nav.Link>
-            <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/services">Выбор даты</Link></Nav.Link>
-          </Nav>          
-        </Nav.Link>
-        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/horo">Гороскоп</Link></Nav.Link>
-        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/starshoro">Асцендент</Link></Nav.Link>
-        <Nav.Link className="menu__list"><Link style={{color: "#ececec"}} to="/article">Статьи</Link></Nav.Link>
-      </Nav>     
+    return (      
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="menu ml-auto mr-auto">
+            <Nav.Link className="menu__list" href="/horo" style={{color: "#ececec"}}>Гороскоп</Nav.Link>
+            <Nav.Link className="menu__list" href="/oven" style={{color: "#ececec"}}>Асцендент</Nav.Link>
+            <Nav.Link className="menu__list" href="/article" style={{color: "#ececec"}}>Статьи</Nav.Link>                        
+            <NavDropdown className="menu__list" title="Услуги" style={{color: "#ececec"}} id="collasible-nav-dropdown">            
+                <NavDropdown.Item className="menu__list" href="/services">Натальная карта</NavDropdown.Item>
+                <NavDropdown.Item className="menu__list" href="/services">Натальная карта ребенка</NavDropdown.Item>
+                <NavDropdown.Item className="menu__list" href="/services">Бизнес астрология</NavDropdown.Item>
+                <NavDropdown.Item className="menu__list" href="/services">Карта совместимости</NavDropdown.Item>
+                <NavDropdown.Item className="menu__list" href="/services">Личная жизнь</NavDropdown.Item>
+                <NavDropdown.Item className="menu__list" href="/services">Выбор даты</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>           
+        </Navbar.Collapse>
+      
     );
   };
 };

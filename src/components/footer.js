@@ -9,9 +9,11 @@ import { Container, Row, Col } from "react-bootstrap";
 class Footer extends Component{
   render(){
     return (
-      <>        
-        <FooterInfo />       
-      </>
+      <Container>
+        <div className="footer">        
+          <FooterInfo />       
+        </div>
+      </Container>
       )
   }
 }

@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import Article from '../components/Article'
 import "./article.scss";
+import { Container } from "react-bootstrap";
 
 export default class ArticleList extends PureComponent {
     state = {
@@ -17,9 +18,11 @@ export default class ArticleList extends PureComponent {
             </li>
         )
         return (
-            <ul>
-                {articleElements}
-            </ul>
+            <Container>
+                <ul>
+                    {articleElements}
+                </ul>
+            </Container>
         )
     }
 
